@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import Rating from '../components/Rating';
 
 const ProductScreen = (props) => {
     const dispatch = useDispatch();
@@ -39,9 +38,6 @@ const ProductScreen = (props) => {
                                     <h1>{product.name}</h1>
                                 </li>
                                 <li>
-                                    <Rating rating={product.rating} numReviews={product.numReviews} />
-                                </li>
-                                <li>
                                     Price : ₹{product.price}
                                 </li>
                             </ul>
@@ -60,7 +56,7 @@ const ProductScreen = (props) => {
                                             <div>Status</div>
                                             <div >
                                                 {
-                                                    product.countInStock > 0
+                                                    product.countinstock > 0
                                                         ? (<span className="success">In Stock</span>)
                                                         : (<span className="danger">Unavailable</span>)
                                                 }
@@ -68,7 +64,7 @@ const ProductScreen = (props) => {
                                         </div>
                                     </li>
                                     {
-                                        product.countInStock > 0 && (
+                                        product.countinstock > 0 && (
                                             <>
                                                 <li>
                                                     <div className="row">
@@ -76,7 +72,7 @@ const ProductScreen = (props) => {
                                                         <div>
                                                             <select value={qty} onChange={e => setQty(e.target.value)}>
                                                                 {
-                                                                    [...Array(product.countInStock).keys()].map(x => (
+                                                                    [...Array(product.countinstock).keys()].map(x => (
                                                                         <option key={x + 1} value={x + 1}>{x + 1}</option>
                                                                     ))
                                                                 }
@@ -87,7 +83,7 @@ const ProductScreen = (props) => {
                                                 <li>
                                                     <button
                                                         onClick={addToCartHandler}
-                                                        className="primary block"
+                                                        className="add-to-cart"
                                                     >
                                                         Add to Cart
                                                     </button>
@@ -95,6 +91,7 @@ const ProductScreen = (props) => {
                                             </>
                                         )
                                     }
+                                   
                                 </ul>
                             </div>
                         </div>

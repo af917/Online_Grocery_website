@@ -17,60 +17,179 @@ const data={
     ],
     products:[
         {
-            name:'Fresh Bhindi',
-            category: 'Vegetables',
-            image: '/images/p2.jpg',
-            price: 25,
-            countInStock: 10,
-            rating: 4.5,
-            numReviews: 10
+        category: 'veg',
+        // count_in_stock: 10,
+        image: '/images/okra.jpg',
+        name: 'Organic Okra',
+        price: 15,
+        countinstock: 10,
+        reviews: 40,
         },
         {
-            name:'Fresh Beans Broad, 250g',
-            category: 'Vegetables',
-            image: '/images/p3.jpg',
-            price: 21,
-            countInStock: 20,
-            rating: 4.0,
-            numReviews: 10
+        category: 'veg',
+        // count_in_stock: 10,
+         image: '/images/greenpepper.jpg',
+         name: 'Organic Greenpepper',
+        price: 25,
+        countinstock: 10,
+        reviews: 40,
         },
         {
-            name:'Fresh Vegetable Potato (9kg)',
-            category: 'Vegetables',
-            image: '/images/p7.jpg',
-            price: 649,
-            countInStock: 0,
-            rating: 4.8,
-            numReviews: 17
+        category: 'veg',
+        // count_in_stock: 10,
+        image: '/images/tomato.jpeg',
+        name: 'Organic Tomatoes',
+        price: 15,
+        countinstock: 10,
+        reviews: 40,
         },
         {
-            name:'Fresh Organic Onion Spring, 100g',
-            category: 'Vegetables',
-            image: '/images/p4.jpg',
-            price: 16,
-            countInStock: 15,
-            rating: 4.5,
-            numReviews: 14
+        category: 'veg',
+        // count_in_stock: 0,
+        image: '/images/yellowonion.jpeg',
+        name: 'Yellow Onion',
+        price: 35,
+        countinstock: 10,
+        reviews: 40,
         },
         {
-            name:'Fresh Chilli, Green, 250g',
-            category: 'Vegetables',
-            image: '/images/p5.jpg',
-            price: 12,
-            countInStock: 5,
-            rating: 4.5,
-            numReviews: 10
+        category: 'veg',
+        image: '/images/spinach-500x500.jpeg',
+        name: 'Organic Spinach',
+        price: 25,
+        countinstock: 10,
+        reviews: 40,
         },
         {
-            name:'Fresh Carrot-Ooty,500g',
-            category: 'Vegetables',
-            image: '/images/p6.jpg',
-            price: 25,
-            countInStock: 12,
-            rating: 4.5,
-            numReviews: 15
-        }
-    ]
-}
+        category: 'veg',
+        image: '/images/carrot.jpg',
+        name: 'Organic Carrot',
+        price: 15,
+        countinstock: 10,
+        reviews: 40,
+        },
+        {
+
+            category: 'fruit',
+            image: '/images/apple.jpg',
+            name: 'Organic Apple',
+            price: 100,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+
+            category: 'fruit',
+            image: '/images/kiwi.jpg',
+            name: 'Kiwi',
+            price: 60,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+
+            category: 'fruit',
+            image: '/images/dragon.jpg',
+            name: 'Organic Dragon Fruit',
+            price: 50,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'fruit',
+            image: '/images/Strawberry.jpg',
+            name: 'Strawberries',
+            price: 40,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'fruit',
+            image: '/images/watermelon.jpg',
+            name: 'Watermelon',
+            price: 30,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'fruit',
+            image: '/images/banana.jpg',
+            name: 'Organic Banana',
+            price: 40,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'meat',
+            image: '/images/chicken.jpeg',
+            name: 'Whole Chicken',
+            price: 180,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'meat',
+            image: '/images/lamb.jpg',
+            name: 'Fresh Lamb',
+            price: 100,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'meat',
+            image: '/images/fish.jpg',
+            name: 'Fish',
+            price: 120,
+            countinstock: 10,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'meat',
+            image: '/images/prawns.jpeg',
+            name: 'Peeled Prawns',
+            price: 80,
+            countinstock: 15,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'meat',
+            image: '/images/mutton.jpg',
+            name: 'Muton',
+            price: 600,
+            countinstock: 15,
+            reviews:30,
+
+        },
+        {
+    
+            category: 'meat',
+            image: '/images/Beef-loin.jpg',
+            name: 'Beef',
+            price: 120,
+            countinstock: 10,
+            reviews:30,
+
+        },
+    ],
+};
+
 
 export default data;

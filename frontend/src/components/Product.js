@@ -1,22 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Rating from './Rating';
+
 
 const Product = (props) => {
   const { product } = props;
   return (
-    <div key={product._id} className="card">
-      <Link to={`/product/${product._id}`}>
-        <img className="medium" src={product.image} alt={product.name} />
-      </Link>
-      <div className="card-body">
-        <Link to={`/product/${product._id}`}>
-          <h2>{product.name}</h2>
-        </Link>
-      </div>
-      <Rating rating={product.rating} numReviews={product.numReviews} />
-      <div className="price"> ₹{product.price}</div>
-    </div>
+    <div key={product._id} className="items">
+            <div className="images">
+            <Link to={`/product/${product._id}`}><img src={product.image} className="item-image-size" alt={product.name}/></Link>
+            </div>
+            <div className="description">
+                <b>{product.name}</b><br/>
+                <div className="item-select">
+                    Price :₹{product.price}
+                </div>
+                <label>Qty:</label>
+                <select className="item-select">
+                    <option>1kg</option>
+                    <option>2kg</option>
+                    <option>3kg</option>
+                    <option>4kg</option>
+                    <option>5kg</option>
+                </select><br/>
+                <button className="buynow-btn">Buy Now</button>
+            </div>
+        </div>
   )
 }
 

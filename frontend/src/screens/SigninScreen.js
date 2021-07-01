@@ -29,7 +29,7 @@ const SigninScreen = (props) => {
         }
     }, [props.history, redirect, userInfo]);
     return (
-        <div>
+           <div>
             <form className="form" onSubmit={submitHandler}>
                 <div>
                     <h1>
@@ -72,7 +72,9 @@ const SigninScreen = (props) => {
                     </div>
                 </div>
             </form>
-        </div>
+            </div>
+            
+            
     )
 }
 

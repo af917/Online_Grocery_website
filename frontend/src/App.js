@@ -1,7 +1,8 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import './App.css';
+//import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import { signout } from './actions/userActions';
+//import { signout } from './actions/userActions';
 import AdminRoute from './screens/AdminRoute';
 import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -15,22 +16,24 @@ import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SigninScreen from './screens/SigninScreen';
 import UserListScreen from './screens/UserListScreen';
+import Footer from './components/Footer';
+import Navebar from './components/Navebar';
 
 
 function App() {
 
-  const cart = useSelector((state) => state.cart);
+  /*const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout());
-  }
+  }*/
   return (
     <BrowserRouter>
-      <div className="grid-container">
-        <header className="row">
+      
+        {/*<header className="row">
           <div>
             <Link className="brand" to="/">Appetito</Link>
           </div>
@@ -78,7 +81,8 @@ function App() {
               </div>
             )}
           </div>
-        </header>
+            </header>*/}
+            <Navebar/>
         <main>
           <Route path="/cart/:id?" component={CartScreen} />
           <Route path="/product/:id" component={ProductScreen} />
@@ -90,12 +94,15 @@ function App() {
           <Route path="/orderhistory" component={OrderHistoryScreen} />
           <PrivateRoute path="/profile" component={ProfileScreen} />
           <AdminRoute path="/userlist" component={UserListScreen}/>
-          <Route path="/" component={HomeScreen} exact />
+          <Route path="/" exact component={HomeScreen} />
         </main>
-        <footer className="row center"> All rights reserved</footer>
-      </div>
+        {/*<footer className="row center"> All rights reserved</footer>*/}
+        <Footer/>
+    
     </BrowserRouter>
+    
   );
 }
 
 export default App;
+
